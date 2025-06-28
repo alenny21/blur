@@ -18,17 +18,22 @@ body {
 
 .bg {
   background: url('https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=2100&q=80') 
-    no-repeat center center/cover;
-  position: absolute;
-  top: -30px;
-  left: -30px;
-  width: calc(100vw + 60px);
-  height: calc(100vh + 60px);
+    no-repeat center center / cover;
+  position: fixed; /* use fixed instead of absolute */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
   filter: blur(30px);
   transition: filter 0.3s ease;
 }
-
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+}
 
 .loading-container {
   color: #fff;
